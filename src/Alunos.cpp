@@ -46,7 +46,7 @@ void Alunos::save_aluno() {
     ofstream MyFile;
     char delimiter = ';';
 
-    MyFile.open("data/dados_alunos.txt", ios::app);
+    MyFile.open("data/dadosAlunos.dat", ios::app);
 
     MyFile << nome << delimiter << num << endl;
 

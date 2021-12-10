@@ -183,7 +183,7 @@ void Avaliacoes::save_avaliacao() {
     ofstream MyFile;
     char delimiter = ';';
 
-    MyFile.open("data/dados_avaliacoes.txt", ios::app);
+    MyFile.open("data/dadosAvaliacoes.dat", ios::app);
 
     MyFile << aluno.get_num() << delimiter << uc.get_codigo() << delimiter << avContinua << delimiter << efolioA << delimiter << efolioB << delimiter << pfolio << delimiter << exame << delimiter << notaFinal << delimiter << aprovacao << endl;
 
@@ -192,7 +192,7 @@ void Avaliacoes::save_avaliacao() {
 
 void Avaliacoes::delete_avaliacao(string eraseLine) {
     /* apaga dados formatados de uma avaliação num ficheiro */
-    string path = "data/dados_avaliacoes.txt";
+    string path = "data/dadosAvaliacoes.dat";
     const char *p = path.c_str();
     string line;
 
@@ -200,7 +200,7 @@ void Avaliacoes::delete_avaliacao(string eraseLine) {
     ofstream fout;
 
     fin.open(path);
-    fout.open("data/temp.txt");
+    fout.open("data/temp.dat");
 
     while ( getline(fin, line) ) {
         /* escrever todas as linhas para o ficheiro temporário excepto a linha a apagar */
@@ -213,12 +213,12 @@ void Avaliacoes::delete_avaliacao(string eraseLine) {
     fin.close();
 
     remove(p);
-    rename("data/temp.txt", p);
+    rename("data/temp.dat", p);
 }
 
 string Avaliacoes::get_file_line() {
     /* converte os dados de uma avaliação numa string */
-    string path = "data/tempLine.txt";
+    string path = "data/tempLine.dat";
     const char *p = path.c_str();
     string line;
     char delimiter = ';';

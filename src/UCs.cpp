@@ -70,7 +70,7 @@ void UCs::save_uc() {
     ofstream MyFile;
     char delimiter = ';';
 
-    MyFile.open("data/dados_ucs.txt", ios::app);
+    MyFile.open("data/dadosUcs.dat", ios::app);
 
     MyFile << nome << delimiter << codigo << delimiter << ano << delimiter << sem << delimiter << ects << endl;
 

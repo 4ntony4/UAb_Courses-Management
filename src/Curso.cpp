@@ -17,7 +17,7 @@ vector<Alunos> Curso::dados_Alunos() {
     vector<Alunos> v_alunos;
     Alunos novo_aluno(0);
     
-    ifstream MyFile("data/dados_alunos.txt");
+    ifstream MyFile("data/dadosAlunos.dat");
     
     string buffer, chunk;
     
@@ -70,7 +70,7 @@ vector<UCs> Curso::dados_UCs() {
     vector<UCs> v_ucs;
     UCs nova_uc(0);
 
-    ifstream MyFile("data/dados_ucs.txt");
+    ifstream MyFile("data/dadosUcs.dat");
     
     string buffer, chunk;
     
@@ -137,7 +137,7 @@ vector<Avaliacoes> Curso::dados_Avaliacoes() {
     UCs uc(0);
     Avaliacoes nova_avaliacao(0);
 
-    ifstream MyFile("data/dados_avaliacoes.txt");
+    ifstream MyFile("data/dadosAvaliacoes.dat");
     
     string buffer, chunk;
     
